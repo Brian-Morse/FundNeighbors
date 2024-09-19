@@ -1,0 +1,146 @@
+.fullBar {
+  display: flex;
+  background-color: #03c03c;
+  height: 5em;
+  width: 100%;
+  position: sticky;
+  overflow-x: auto;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+  height: 100%;
+}
+
+.logoImage {
+  height: 3em;
+  width: 8em;
+}
+
+.links {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  margin-left: 3em;
+}
+
+.navLinks li a,
+.accountLinks li a,
+.loginLinks li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease-in-out,
+    border 0.1s ease-in-out;
+}
+
+.navLinks li a:hover,
+.accountLinks li a:hover,
+.loginLinks li a:hover {
+  background-color: #018501;
+}
+
+.loginLinks {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.accountLinks {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.accountLinks li button {
+  display: block;
+  color: white;
+  background-color: #03c03c;
+  text-align: center;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.accountLinks li button:hover {
+  background-color: #018501;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1em;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: #018501;
+    box-shadow: -4px 8px 16px rgba(0, 0, 0, 0.5);
+    min-width: 25%;
+    top: 5em;
+    right: 0em;
+  }
+
+  .navLinks,
+  .accountLinks,
+  .loginLinks {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .navLinks li a:hover,
+  .accountLinks li a:hover,
+  .loginLinks li a:hover {
+    border: 2px solid white;
+  }
+
+  .accountLinks li button {
+    background-color: #018501;
+  }
+
+  .accountLinks li button:hover {
+    border: 2px solid white;
+  }
+
+  .menuShow {
+    display: flex;
+  }
+}
